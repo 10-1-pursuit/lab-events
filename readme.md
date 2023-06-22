@@ -22,7 +22,7 @@ There are two parts to this lab: Pixel Painter and Tic Tac Toe.
 
 You will need to complete the following tasks. If you're unclear about any of the instructions below, reach out to your instructor.
 
-- [ ] When a color is clicked in the `#palette`, the `#current-color` element should have its background changed to that color. For example, if you click the green circle in the `#palette`, the `#current-color` element's background should change to be green.
+- [x] When a color is clicked in the `#palette`, the `#current-color` element should have its background changed to that color. For example, if you click the green circle in the `#palette`, the `#current-color` element's background should change to be green.
 
 - [ ] When you click on a `.cell`, its background should change to match the background of `#current-color`.
 
