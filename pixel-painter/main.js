@@ -10,9 +10,28 @@ newGridBox.classList.add("cell")
 
 canvasGrid.append(newGridBox)} //implement this change 
 
-canvasGrid.addEventListener("click", (event) => {
-    console.log("event object", event) //interact w keys in the event type
-    console.log("targeted event object", event.target)
-  
-    event.target.style.color = "red";
-  });
+canvasGrid.addEventListener("click", (event)=> {
+    console.log("cell clicked");
+
+    if (event.target.classList.contains("cell")) {
+        const color = currentColor.style.backgroundColor;
+       event.target.style.backgroundColor = color;
+        console.log("hey im a color", color)
+    }
+})
+
+
+
+const palette = document.querySelector("#palette");
+const currentColor = document.querySelector("#current-color");
+const cells = document.querySelectorAll(".cell");
+
+palette.addEventListener("click", (event)=> {
+    console.log("why you touching me?");
+
+    if (event.target.classList.contains("color")) {
+        const color = event.target.style.backgroundColor;
+        currentColor.style.backgroundColor = color;
+        console.log("hey im a color", color)
+    }
+})
