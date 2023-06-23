@@ -25,3 +25,22 @@ canvas.addEventListener("click", function (event) {
         event.target.style.backgroundColor = backgroundColor;
     }
 });
+
+
+const resetButton = document.createElement("button");
+resetButton.setAttribute("id", "reset-button")
+resetButton.textContent = "Reset"
+resetButton.style.padding = "1em"
+resetButton.style.display = "block"
+resetButton.style.margin = "auto"
+resetButton.addEventListener("click", () => {
+    const cells = document.querySelectorAll(".cell");
+    cells.forEach(cell => cell.style.backgroundColor = "white");
+});
+
+const footer = document.querySelector("footer");
+footer.appendChild(resetButton)
+
+
+const anchors = document.querySelectorAll("a");
+anchors.forEach(anchor => anchor.style.margin = "50px");
