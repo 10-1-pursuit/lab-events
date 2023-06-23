@@ -2,9 +2,10 @@
 
 html,
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
+  overflow: hidden;
 }
 
 h1,
@@ -23,39 +24,43 @@ footer {
 }
 
 header h1 {
-  margin: 0 0 50px;
+  margin: 0 0 20px;
   padding: 25px;
 }
 
 #canvas {
-  border: 3px solid #393e41;
+  border: 0px solid #91bad4;
   display: grid;
-  grid-template-columns: repeat(10, 50px);
-  height: 500px;
-  margin: 0 auto;
-  width: 500px;
+  grid-template-columns: repeat(45, 54px);
+  /* height: 500px; */
+  margin: 8 auto;
+  /* width: 500px; */
+  height: fit-content;
 }
 
 .cell {
-  border: 1px solid #393e41;
+  border: 1px dotted #000a14;
   box-sizing: border-box;
   display: inline-block;
-  margin: 0;
+  margin: -2px;
+  /* overflow: hidden; */
   height: 50px;
   width: 50px;
+  padding: 8px;
 }
 
 #current-color {
   border: 2px solid #393e41;
   display: block;
-  height: 50px;
-  margin: 25px auto;
-  width: 50px;
+  height: 100px;
+  margin: 0px 20px 0px;
+  width: 100px;
+  box-shadow: 0px 10px 13px -7px #000000;
 }
 
 #palette {
-  height: 50px;
-  margin: 25px auto;
+  height: 70px;
+  margin: -20px 400px 17px -375px;
   text-align: center;
   width: 80%;
 }
@@ -65,7 +70,7 @@ header h1 {
   border-radius: 50%;
   box-sizing: border-box;
   display: inline-block;
-  margin: 10px;
+  margin: -50px 15px 20px;
   height: 50px;
   width: 50px;
 }
@@ -88,4 +93,91 @@ a {
 a:hover {
   background-color: blanchedalmond;
   opacity: 0.5;
+}
+#picker {
+  background-image: url("https://www.flaticon.com/free-icons/color-picker");
+}
+#reset-btn {
+  margin: -20px auto 15px 200px;
+  padding: 15px 75px;
+  background-color: #06a4a7b5;
+  color: white;
+  border: none;
+  box-shadow: inset 0px 1px 25px 7px rgba(191, 64, 255, 0.401);
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 28px;
+}
+#reset-btn:hover {
+  background-color: #0dae88;
+}
+#reset-btn:active {
+  background-color: rgb(17, 148, 128);
+  box-shadow: 0px 3px 11px -3px #000000;
+  box-shadow: inset 0px 1px 40px 10px rgba(255, 64, 64, 0, 63);
+}
+#fill-btn {
+  margin: -20px auto 15px 200px;
+  padding: 15px 75px;
+  background-color: #06a4a7be;
+  color: white;
+  border: none;
+  box-shadow: inset 0px 1px 25px 7px rgba(191, 64, 255, 0.401);
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 28px;
+}
+#fill-btn:hover {
+  background-color: #0dae88;
+}
+#fill-btn:active {
+  background-color: rgb(17, 148, 128);
+  box-shadow: 0px 3px 11px -3px #000000;
+  box-shadow: inset 0px 1px 40px 10px rgba(255, 64, 64, 0, 63);
+}
+#draw-btn {
+  margin: -20px auto 15px 200px;
+  padding: 15px 75px;
+  background-color: #06a4a76e;
+  color: white;
+  border: none;
+  box-shadow: inset 0px 1px 25px 7px rgba(191, 64, 255, 0.401);
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 28px;
+}
+#draw-btn:hover {
+  background-color: #0dae88;
+}
+#draw-btn:active {
+  background-color: rgb(17, 148, 128);
+  box-shadow: 0px 3px 11px -3px #000000;
+  box-shadow: inset 0px 1px 40px 10px rgba(255, 64, 64, 0, 63);
+}
+#picker-btn {
+  margin: -20px auto 15px 200px;
+  padding: 15px 75px;
+  background-color: #06a4a76e;
+  color: white;
+  border: none;
+  box-shadow: inset 0px 1px 25px 7px rgba(191, 64, 255, 0.401);
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 28px;
+}
+#picker-btn:hover {
+  background-color: #0dae88;
+}
+#picker-btn:active {
+  background-color: rgb(17, 148, 128);
+  box-shadow: 0px 3px 11px -3px #000000;
+  box-shadow: inset 0px 1px 40px 10px rgba(255, 64, 64, 0, 63);
 }
