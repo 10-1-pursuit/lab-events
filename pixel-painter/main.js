@@ -1,24 +1,46 @@
-const paletteColors = document.querySelectorAll('.color');
-//get the palette color
+const main = document.querySelector("main");
+for (let i = 0; i < 100; i++) {
+  const div = document.createElement("div");
+  div.classList.add("cell");
+  main.append(div);
+}
 
-const currentColor = document.querySelector('#current-color');
-// get the current color
-
-const cells = document.querySelectorAll('.cell');
-//get the canvas cells
-
-paletteColors.forEach(color =>{
-    color.addEventListener('click', () => {
-        currentColor.style.backgroundColor = color.style.backgroundColor;
-    });
+document.querySelectorAll(".color").forEach((color) => {
+  color.addEventListener("click", (event) => {
+    document.querySelector("#current-color").style.backgroundColor =
+      event.target.style.backgroundColor;
+  });
 });
 
-//add click event listeners to palette color
-
-cells.forEach(cell => {
-    cell.addEventListener('click', () => {
-        cell.style.backgroundColor = currentColor.style.backgroundColor
-    });
+document.querySelectorAll(".cell").forEach((cell) => {
+  color.addEventListener("click", (event) => {
+    event.target.style.backgroundColor =
+      document.querySelector("#current-color").style.backgroundColor;
+  });
 });
 
-//add click event listeners to canvas cells
+cells = document.querySelectorAll(".cell"); 
+canvasGrid.addEventListener("click", (event) => {
+    console.log("cell clicked")
+}
+
+if (event.target.classList.contains("cell")) {
+    // if a cell is clicked, it checks if the clicked element has the class "cell"
+    const color = currentColor.style.backgroundColor; // if it does, it grabs the current background color
+    event.target.style.backgroundColor = color; // and sets it as the background color of the clicked cell
+    console.log("Painted cell with color:", color);
+});
+});
+resetButton.setAttribute("id", "reset-button"); // set ID and text content of resetButton
+resetButton.textContent = "Reset";
+
+const wrapper = document.querySelector("#wrapper");
+wrapper.appendChild(resetButton);
+
+resetButton.addEventListener("click", () => {
+  console.log("Reset button clicked");
+
+  cells.forEach((cell) => {
+    cell.style.backgroundColor = "white"; // when reset button is clicked, it iterates over each cell and sets their background color to white.
+  });
+});
