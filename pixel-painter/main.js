@@ -48,3 +48,23 @@ colors.forEach(color => color.addEventListener("click", handleColorClick));
 
 // Bind an event listener to the cells.
 canvas.addEventListener("click", handleCellClick);
+
+// Create a reset button element.
+const resetButton = document.createElement("button");
+resetButton.setAttribute("id", "reset-button");
+resetButton.textContent = "↪ Reset ↩";
+resetButton.style.padding = "1px";
+resetButton.style.display = "block";
+resetButton.style.margin = "auto";
+resetButton.style.boxShadow = "0 5px 10px #000000";
+
+// Add an event listener to the reset button element.
+resetButton.addEventListener("click", () => {
+  // Reload the page.
+  window.location.reload();
+});
+
+const footer = document.querySelector("footer");
+
+// Append the reset button element to the footer element.
+footer.append(resetButton);
