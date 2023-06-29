@@ -23,3 +23,27 @@ for (let i = 0; i < 9; i++) {
     // Add the square to the squares array.
     squares.push(square);
 }
+
+// Create a function to handle clicks on the squares.
+function handleClick(event) {
+    // Get the square that was clicked.
+    const square = event.target;
+
+    // Check if the square is empty.
+    if (square.classList.contains("empty")) {
+        // Set the text of the square to the current player's symbol.
+        square.textContent = currentPlayer;
+
+        // Remove the `empty` class from the square.
+        square.classList.remove("empty");
+
+        // Switch the current player.
+        currentPlayer = currentPlayer === "X" ? "O" : "X";
+    }
+}
+
+// Attach the click handler to the squares.
+squares.forEach(square => square.addEventListener("click", handleClick));
+
+// Variables to track the current player and the winner.
+let currentPlayer = "X";
