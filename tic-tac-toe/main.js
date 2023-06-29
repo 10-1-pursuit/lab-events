@@ -47,3 +47,12 @@ squares.forEach(square => square.addEventListener("click", handleClick));
 
 // Variables to track the current player and the winner.
 let currentPlayer = "X";
+
+// Get the reset button.
+const resetButton = document.querySelector("button");
+
+// Add an event listener to the reset button element.
+resetButton.addEventListener("click", () => {
+    // Reload the page.
+    window.location.reload();
+});
