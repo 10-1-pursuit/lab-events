@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", fillCanvas);
 const handleColorClick = (event) => {
     // Get the background color of the clicked color.
     const backgroundColor = event.target.style.backgroundColor;
-
     // Set the background color of the current color element to the clicked color.
     currentColor.style.backgroundColor = backgroundColor;
 };
@@ -68,3 +67,26 @@ const footer = document.querySelector("footer");
 
 // Append the reset button element to the footer element.
 footer.append(resetButton);
+
+// Create a fill all button element.
+const fillAllButton = document.createElement("button");
+fillAllButton.setAttribute("id", "fill-all-button");
+fillAllButton.textContent = "Fill All";
+fillAllButton.style.padding = "1px";
+fillAllButton.style.display = "block";
+fillAllButton.style.margin = "auto";
+fillAllButton.style.boxShadow = "0 5px 10px #000000";
+
+// Add an event listener to the fill all button element.
+fillAllButton.addEventListener("click", () => {
+  // Get the current color element.
+  const currentColor = document.querySelector("#current-color");
+  // Get all the cells in the canvas.
+  const cells = document.querySelectorAll("#canvas .cell");
+  // Set the background color of all the cells to the current color.
+  cells.forEach(cell => cell.style.backgroundColor = currentColor.style.backgroundColor);
+});
+
+// Append the fill all button element to the same parent element as the current color element.
+currentColor.parentElement.appendChild(fillAllButton);
+
