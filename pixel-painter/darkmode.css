@@ -1,0 +1,18 @@
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: rgb(47, 47, 47);
+        color: white;
+    }
+
+    #canvas {
+        border: 3px solid #6e787e;
+    }
+
+    .cell {
+        border: 1px solid #6e787e;
+    }
+
+    #current-color {
+        border: 2px solid #6e787e;
+    }
+}
