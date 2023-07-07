@@ -34,4 +34,14 @@ palette.addEventListener("click", (event)=> {
         currentColor.style.backgroundColor = color;
         console.log("hey im a color", color)
     }
+
 })
+
+const resetBtn = document.createElement("button")
+
+resetBtn.addEventListener("click" ,() => {
+    cells.forEach((cell) => cell.style.backgroundColor = "white")
+});
+
+
+
