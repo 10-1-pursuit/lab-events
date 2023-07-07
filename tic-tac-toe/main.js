@@ -18,3 +18,8 @@ function makeBoard() {
     console.log("cell clicked");
   });
 }
+
+function makeMove() {
+    const oneSquare = document.querySelectorAll('.square')
+    oneSquare.addEventHandler()
+}
