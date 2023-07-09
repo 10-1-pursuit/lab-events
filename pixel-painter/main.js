@@ -31,3 +31,12 @@ function colorCells() {
 }
 colorCells();
 
+const clearButton = document.querySelector('#clear');
+function clearCanvas() {
+    clearButton.addEventListener('click', (event) => {
+        for (let cell of cells) {
+            cell.setAttribute("style", `background-color: white`);
+        }
+    });
+}
+clearCanvas();
