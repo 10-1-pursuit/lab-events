@@ -69,6 +69,7 @@ a {
   color: plum;
   font-size: 2em;
 }
+
 a:hover {
   background-color: blanchedalmond;
   opacity: 0.5;
